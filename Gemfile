@@ -7,7 +7,8 @@ gem 'rails', '4.2.1'
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -28,7 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'carrierwave',             '0.10.0'
 gem 'mini_magick',             '3.8.0'
-gem 'fog',                     '1.23.0'
+gem 'fog'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150523014547) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
@@ -21,8 +24,8 @@ ActiveRecord::Schema.define(version: 20150523014547) do
     t.string   "picture"
   end
 
-  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
-  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id"
+  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at", using: :btree
+  add_index "microposts", ["user_id"], name: "index_microposts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -39,4 +42,5 @@ ActiveRecord::Schema.define(version: 20150523014547) do
     t.datetime "reset_sent_at"
   end
 
+  add_foreign_key "microposts", "users"
 end
