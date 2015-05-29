@@ -1,4 +1,4 @@
-class PasswordResetsController < ApplicationController
+  class PasswordResetsController < ApplicationController
   before_action :get_user,         only: [:edit, :update]
   before_action :valid_user,       only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]
@@ -39,11 +39,6 @@ class PasswordResetsController < ApplicationController
 
     def user_params
       params.require(:user).permit(:password, :password_confirmation)
-    end
-
-    # Returns true if password is blank.
-    def password_blank?
-      params[:user][:password].blank?
     end
 
     # Before filters
