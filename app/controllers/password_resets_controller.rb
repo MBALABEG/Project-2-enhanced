@@ -11,6 +11,7 @@
     if @user
       @user.create_reset_digest
       @user.send_password_reset_email
+      puts "Hello! create"
       flash[:info] = "Email sent with password reset instructions"
       redirect_to root_url
     else
@@ -20,9 +21,13 @@
   end
 
   def edit
+    puts "Hello! FROM EDIT"
   end
 
   def update
+    puts "Hello! FROM UPDATE"
+
+    puts "Hello!"
     if params[:user][:password].empty?
       flash.now[:danger] = "Password can't be empty"
       render 'edit'
@@ -31,6 +36,7 @@
       flash[:success] = "Password has been reset."
       redirect_to @user
     else
+      puts "Hello! ELSE"
       render 'edit'
     end
   end
