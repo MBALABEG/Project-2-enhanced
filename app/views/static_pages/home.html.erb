@@ -15,17 +15,18 @@
   </div>
 <% else %>
   <div class="center jumbotron">
-    <h1>Welcome to the Vendor Directory</h1>
+    <h1>No amount of water conservation is too small</h1>
 
-    <h2>
-      This is the home page
-      <!-- <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application. -->
+    <h2 class="main_text">
+      A unique offer for drought-conscious Californians:
+      replace water-intensive grass on your lawn with a beauriful drought-resistant alternative,
+      we provide the switch for free.
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up!", signup_path, class: "btn btn-lg btn-primary" %>
   </div>
 
-  <%= link_to image_tag("rails.png", alt: "Rails logo"),
-              'http://rubyonrails.org/' %>
+<%= link_to image_tag(".jpg", alt: "How Turf Removal Program works!"),
+            'http://www.socalwatersmart.com/index.php/qualifyingproducts/turfremoval' %>
+
 <% end %>

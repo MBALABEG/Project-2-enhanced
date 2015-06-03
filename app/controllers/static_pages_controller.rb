@@ -11,8 +11,12 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+
   end
 
   def contact
+  @user = current_user
+  @user.send_contact_email
+   flash[:info] = "Thanks for contacting us."
   end
 end

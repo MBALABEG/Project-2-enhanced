@@ -23,8 +23,16 @@ textarea {
   resize: vertical;
 }
 
+.main_text {
+  color: #fff;
+  font-size: 3em;
+  letter-spacing: -2px;
+}
+
 .center {
   text-align: center;
+  background: image-url("1.jpg");
+  background-size: cover;
 }
 
 .center h1 {
