@@ -12,7 +12,7 @@ class UserMailer < ApplicationMailer
 
   def contact_email(user)
     @user = user
-    mail to: "mbalabeg@yahoo.com", subject: "Contact Email"
+    mail to: "mbalabeg@yahoo.com", subject:  "Contact Email"
   end
 
 end

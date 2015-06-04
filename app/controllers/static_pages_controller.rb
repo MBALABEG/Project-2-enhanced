@@ -15,8 +15,9 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
-  @user = current_user
-  @user.send_contact_email
-   flash[:info] = "Thanks for contacting us."
+    if logged_in?
+      @user  = current_user
+      UserMailer.contact_email(@user)
+    end
   end
 end
