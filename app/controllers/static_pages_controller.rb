@@ -17,6 +17,7 @@ class StaticPagesController < ApplicationController
   def contact
     if logged_in?
       @user  = current_user
+      @user.inspect
       UserMailer.contact_email(@user)
     end
   end
