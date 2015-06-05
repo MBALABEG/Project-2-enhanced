@@ -4,11 +4,9 @@
   before_action :check_expiration, only: [:edit, :update]
 
   def new
-    flash[:success] = "Password has been new."
   end
 
   def create
-    flash[:success] = "Password has been create."
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if @user
       @user.create_reset_digest
@@ -22,7 +20,6 @@
   end
 
   def edit
-flash[:success] = "Password has been edit."
   end
 
   def update

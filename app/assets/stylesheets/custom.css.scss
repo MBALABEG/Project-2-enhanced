@@ -22,13 +22,14 @@ section {
 textarea {
   resize: vertical;
 }
-
+/* We provide the switch for free */
 .main_text {
-  color: #fff;
+  color: #ff0;
   font-size: 3em;
   letter-spacing: -2px;
 }
 
+/* How turf removal works */
 .center {
   text-align: center;
   background: image-url("1.jpg");
@@ -36,6 +37,7 @@ textarea {
 }
 
 .center h1 {
+color: #f0f;
   margin-bottom: 10px;
 }
 /* typography */
@@ -49,6 +51,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #0ff;
 }
 
 h2 {
@@ -57,7 +60,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: #fff;
 }
 
 p {
